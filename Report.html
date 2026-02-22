@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/matlab.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+  	<style>
+    .hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+     
+
+    code {
+        white-space: pre-wrap;
+        overflow: auto;
+    }
+
+	@media print {
+		hr {
+            page-break-after: always;
+            visibility: hidden;
+            height: 0;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+		}
+	}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<h1 id="my-report">My Report</h1>
+<h3 id="q1">Q1</h3>
+<p>Hello!</p>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  hljs.highlightAll();
+  hljs.initLineNumbersOnLoad();
+});
+</script> 
+
+<script>
+(function () {
+  const body = document.body.textContent;
+  if (body.match(/(?:\$|\\\(|\\\[|\\begin\{.*?})/)) {
+    if (!window.MathJax) {
+      window.MathJax = {
+        tex: {
+          inlineMath: {'[+]': [['$', '$']]}
+        }
+      };
+    }
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js';
+    document.head.appendChild(script);
+  }
+})();
+</script>
+</body>
+</html>
