@@ -1,0 +1,41 @@
+name: Generate PDF
+
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+      # - '.github/workflows/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+permissions:
+    contents: write
+    
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ windows-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - shell: cmd
+        run: |
+          .\setup.cmd
+
+      - shell: cmd
+        run: |
+          .\build.cmd
+          
+      - uses: EndBug/add-and-commit@v9.1.4 # You can change this to use a specific version.
+      
+      # - name: Release prebuilt
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: "${{ github.event.repository.name }}"
+      #     artifacts: "${{ github.event.repository.name }}.pdf"
+      #     allowUpdates: true
+      #     token: ${{ secrets.GITHUB_TOKEN }}
