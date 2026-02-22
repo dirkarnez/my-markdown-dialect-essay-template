@@ -1,4 +1,4 @@
-[my-markdown-dialect-essay-template](https://dirkarnez.github.io/my-markdown-dialect-essay-template)
-====================================================================================================
+[my-markdown-dialect-essay-template](https://dirkarnez.github.io/my-markdown-dialect-essay-template/Report.html)
+================================================================================================================
 ### Using
 - [dirkarnez/my-markdown-dialect: For engineering essays](https://github.com/dirkarnez/my-markdown-dialect)
