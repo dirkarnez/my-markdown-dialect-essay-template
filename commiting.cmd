@@ -1,0 +1,17 @@
+@echo off
+
+@REM set PATH=%USERPROFILE%\Downloads\PortableGit\bin
+set PATH=D:\Softwares\PortableGit\bin
+
+:end
+cls &&^
+cd %cd% &&^
+C:\Windows\System32\timeout.exe /t 5 &&^
+echo committing &&^
+git config --global credential.helper "" &&^
+git add * &&^
+git commit -m "- upload files" && ( git push -u origin main || C:\Windows\System32\rundll32 user32.dll,MessageBeep  )
+
+goto end
+
+pause
